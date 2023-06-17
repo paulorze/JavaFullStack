@@ -7,3 +7,5 @@ Repositorio creado para ir subiendo las actividades correspondientes al bootcamp
 
 - [@paulorze](https://www.github.com/paulorze)
 
+
+Gracias por leerme!
