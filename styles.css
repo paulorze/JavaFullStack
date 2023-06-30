@@ -17,6 +17,13 @@ body, header, main, footer {
     background-color: var(--color-fondo);
 }
 
+.decoration__line {
+    width: 115%;
+    height: 1rem;
+    padding: 0.5rem;
+    background-color: var(--color-detalles);
+}
+
 header, main {
     width: 59rem;
 }
