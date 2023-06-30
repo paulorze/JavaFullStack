@@ -1,0 +1,83 @@
+:root {
+    --color-principal: #0a2ff1;
+    --color-secundario: #04146c;
+    --color-fondo: #edf7ff;
+    --color-detalles: #8a9af1;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body, header, main, footer {
+    background-color: var(--color-fondo);
+}
+
+header, main {
+    width: 59rem;
+}
+
+header {
+    padding: 5rem;
+    padding-right: 0;
+}
+
+main {
+    padding-left: 5rem;
+}
+
+h1, h2, .footer__texto {
+    font-family: 'MuseoModerno', cursive;
+    font-weight: bold;
+}
+
+h1, .subtitulo, h2 {
+    color: var(--color-principal);
+    margin-bottom: 0;
+}
+
+h1 {
+    font-size: 88pt;
+    line-height: 80pt;
+}
+
+.subtitulo {
+    font-size: 39pt;
+    margin-top: 0;
+}
+
+.section__texto p{
+    margin-bottom: 3rem;
+}
+
+p {
+    font-family: 'Asap', sans-serif;
+    color: var(--color-secundario);
+    font-size: 25pt;
+}
+
+h2 {
+    font-size: 36pt;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+ul li {
+    font-family: 'Asap', sans-serif;
+    font-weight: bold;
+    font-size: 25pt;
+    padding: 1rem;
+}
+
+.footer__texto {
+    font-size: 149pt;
+    color: var(--color-detalles);
+}
