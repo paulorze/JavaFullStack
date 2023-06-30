@@ -1,3 +1,7 @@
+:root {
+    --color-principal: #0a2ff1;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -6,13 +10,13 @@
 }
 
 body {
-    background-color: black;
+    background-color: var(--color-principal);
     font-family: 'Montserrat', sans-serif;;
     color: white;
     text-align: center;
 }
 
-header, section, strong {
+header, section, b, strong {
     font-weight: 900;
 }
 
@@ -21,21 +25,25 @@ aside, footer {
 }
 
 header {
+    margin-top: 3rem;
     font-size: 50pt;
-    padding: 1rem;
-    padding-bottom: 4rem;
+    padding-bottom: 6rem;
+    color: var(--color-principal);
+    background-color: white;
 }
 
 section p:first-child{
     font-size: 148pt;
-    background-color: white;
-    color: black;
+    background-color: black;
+    color: white;
 }
 
 section p:last-child {
     font-size: 163pt;
     padding-top: 8rem;
     padding-bottom: 8rem;
+    background-color: white;
+    color: black;
 }
 
 aside {
@@ -44,12 +52,19 @@ aside {
     color: black;
 }
 
+aside strong {
+    background-color: black;
+    color: white;
+}
+
 strong {
     font-size: 45pt;
 }
 
 footer {
     font-size: 44pt;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
+    padding-top: 4rem;
+    margin-bottom: 6rem;
+    background-color: white;
+    color: var(--color-principal);
 }
