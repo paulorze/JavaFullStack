@@ -1,6 +1,5 @@
 :root {
     --color-principal: #0a2ff1;
-    --color-fondo:  #3ffff3;
 }
 
 *{
@@ -13,35 +12,28 @@ body {
     font-family: 'Poppins', sans-serif;
     padding: 2rem;
     color: var(--color-principal);
+    font-size: 24pt;
 }
 
-header {
-    width: 55rem;
+footer {
+    width: fit-content;
 }
 
-h1 {
-    font-size: 59pt;
+footer p {
+    font-weight: 300;
+    margin-bottom: 2rem;
+}
+
+footer strong {
     font-weight: 700;
 }
 
-h1 span {
-    background-color: var(--color-fondo);
+footer div {
+    text-align: center;
 }
 
-section {
-    width: 48rem;
-    padding-top: 4rem;
-    padding-bottom: 2rem;
-    font-size: 23pt;
-    font-weight: 500;
-}
-
-aside {
-    height: 50rem;
-}
-
-aside img {
-    height: 100%;
-    background-image: url(./assets/fondo.JPG);
-    background-size: 100% 100%;
+footer img {
+    width: 100px;
+    vertical-align: middle;
+    margin-left: 30px;
 }
