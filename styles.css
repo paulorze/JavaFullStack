@@ -1,70 +1,47 @@
 :root {
     --color-principal: #0a2ff1;
+    --color-fondo:  #3ffff3;
 }
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-transform: uppercase;
 }
 
 body {
-    background-color: var(--color-principal);
-    font-family: 'Montserrat', sans-serif;;
-    color: white;
-    text-align: center;
-}
-
-header, section, b, strong {
-    font-weight: 900;
-}
-
-aside, footer {
-    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    padding: 2rem;
+    color: var(--color-principal);
 }
 
 header {
-    margin-top: 3rem;
-    font-size: 50pt;
-    padding-bottom: 6rem;
-    color: var(--color-principal);
-    background-color: white;
+    width: 55rem;
 }
 
-section p:first-child{
-    font-size: 148pt;
-    background-color: black;
-    color: white;
+h1 {
+    font-size: 59pt;
+    font-weight: 700;
 }
 
-section p:last-child {
-    font-size: 163pt;
-    padding-top: 8rem;
-    padding-bottom: 8rem;
-    background-color: white;
-    color: black;
+h1 span {
+    background-color: var(--color-fondo);
+}
+
+section {
+    width: 48rem;
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+    font-size: 23pt;
+    font-weight: 500;
 }
 
 aside {
-    font-size: 36pt;
-    background-color: white;
-    color: black;
+    height: 50rem;
 }
 
-aside strong {
-    background-color: black;
-    color: white;
-}
-
-strong {
-    font-size: 45pt;
-}
-
-footer {
-    font-size: 44pt;
-    padding-top: 4rem;
-    margin-bottom: 6rem;
-    background-color: white;
-    color: var(--color-principal);
+aside img {
+    height: 100%;
+    background-image: url(./assets/fondo.JPG);
+    background-size: 100% 100%;
 }
