@@ -1,7 +1,6 @@
 :root {
     --color-texto: #04146c;
     --color-secundario:  #0a2ff1;
-    --color-acento: #414166;
 }
 
 *{
@@ -10,67 +9,59 @@
     box-sizing: border-box;
 }
 
-body {
-    margin: 20px;
-    font-family: 'Mulish', sans-serif;
-}
-
-aside {
-    border: 1px solid #c9d1ff;
-    width: 600px;
+header {
+    border-top: 30px solid #3958f1;
+    padding: 30px;
     text-align: center;
-    padding: 20px;
 }
 
-h2 {
+nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#logo {
+    width: 5%;
+}
+
+nav ul {
+    font-family: 'Roboto', sans-serif;
     font-size: 18pt;
-    font-weight: bold;
-    color: var(--color-texto);
-    margin-bottom: 20px;
+    list-style: none;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
 }
 
-form {
-    width: 500px;
-    margin: 0 auto;
-}
-
-input, button {
-    width: 500px;
-    height: 50px;
-    margin: 0 auto;
-    margin-bottom: 10px;
+nav ul li {
     padding: 10px;
 }
 
-input {
-    font-family: 'Mulish', sans-serif;
-    font-size: 14pt;
-    color: var(--color-acento);
-    border: 1px solid var(--color-secundario);
+nav ul a {
+    text-decoration: none;
+    color: var(--color-texto);
 }
 
-button {
-    font-family: 'Mulish', sans-serif;
-    font-size: 15pt;
-    font-weight: 600;
-    color: white;
-    background-color: var(--color-secundario);
+.active {
+    font-weight: bold;
 }
 
-hr {
-    width: 500px;
-    height: 1px;
-    background-color: var(--color-texto);
-    border: none;
-    margin: 10px auto;
+h1 {
+    font-family: 'Roboto Slab', serif;
+    font-size: 72pt;
+    font-weight: bold;
+    color: var(--color-secundario);
+    margin-top: 100px;
+    margin-bottom: 25px;
 }
 
 p {
-    margin-top: 20px;
-    font-size: 14pt;
+    font-family: 'Roboto', sans-serif;
+    font-size: 26pt;
+    color: var(--color-texto);
 }
 
-p a {
-    color: var(--color-secundario);
-    text-decoration: none;
+img {
+    width: 100%;
 }
