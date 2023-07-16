@@ -1,9 +1,16 @@
 :root {
     --color-texto: #04146c;
     --color-secundario:  #0a2ff1;
-    --color-acento1: #2c00cc;
-    --color-acento2: #f98500;
-    --color-borde: #c5cdfd;
+}
+
+@font-face {
+    font-family: 'Coolvetica';
+    src: url(./assets/coolvetica\ rg.otf);
+}
+
+@font-face {
+    font-family: 'Robotoff';
+    src: url(./assets/Roboto-Light.ttf);
 }
 
 *{
@@ -12,173 +19,48 @@
     box-sizing: border-box;
 }
 
-header {
-    border-top: 30px solid #3958f1;
-    padding: 30px;
+main {
+    padding: 20px;
+}
+
+section {
+    width: 900px;
     text-align: center;
 }
 
-nav {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-#logo {
-    width: 5%;
-}
-
-nav ul {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18pt;
-    list-style: none;
-    width: 600px;
-    display: flex;
-    justify-content: space-around;
-}
-
-nav ul li {
-    padding: 10px;
-}
-
-nav ul a {
-    text-decoration: none;
-    color: var(--color-texto);
-}
-
-.active {
-    font-weight: bold;
-}
-
 h1 {
-    font-family: 'Roboto Slab', serif;
-    font-size: 72pt;
-    font-weight: bold;
+    font-family: 'Coolvetica', sans-serif;
+    font-size: 90pt;
     color: var(--color-secundario);
-    margin-top: 100px;
-    margin-bottom: 25px;
 }
 
 p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 26pt;
+    font-family: 'Robotoff', sans-serif;
+    font-size: 30pt;
+    font-weight: 300;
     color: var(--color-texto);
+    margin: 50px 0;
 }
 
-.banner img {
-    width: 100%;
-}
-
-.ventajas {
-    background-image: url('./assets/M5-Desafio3-img.png');
-    background-repeat: no-repeat;
-    background-position-x: right;
-    background-position-y: bottom;
-    background-size: contain;
-    margin: 0;
-    padding: 50px 0 50px 100px;
-    height: fit-content;
-}
-
-.ventajas aside {
-    width: 650px;
-
-}
-
-h2 {
-    font-family: 'Roboto Slab', serif;
-    font-size: 34pt;
-    font-weight: bold;
-    color: var(--color-secundario);
-    margin-bottom: 30px;
-}
-
-.ventajas p {
-    font-family: 'Roboto', sans-serif;
-    font-size: 18pt;
-    color: var(--color-texto);
-}
-
-.texto {
-    margin-bottom: 20px;
-}
-
-.contacto {
-    padding: 40px;
-}
-
-.contacto__titulo {
-    font-family: 'Roboto Slab', serif;
-    font-size: 34pt;
-    font-weight: bold;
-    color: var(--color-acento1);
-    margin-bottom: 30px;
-}
-
-.contacto__subtitulo, .contacto label {
-    font-family: 'Roboto', sans-serif;
-    font-size: 23pt;
-    color: var(--color-texto);
-}
-
-.contacto__subtitulo {
-    margin-bottom: 30px;
-}
-
-input, textarea {
-    display: block;
-    font-family: 'Roboto', sans-serif;
-    font-size: 23pt;
-    border: 3px solid var(--color-borde);
-    outline: none;
-    width: 500px;
-    margin-top: 20px;
-    margin-bottom: 40px;
-    padding-left: 10px;
-}
-
-input {
-    height: 50px;
-}
-
-textarea {
-    height: 100px;
-}
-
-.contacto label{
-    font-weight: bold;
-}
-
-i {
-    font-style: normal;
-    color: red;
+.botones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
 }
 
 button {
-    font-family: 'Roboto Slab', serif;
-    font-size: 24pt;
-    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30pt;
+    border: 3px solid var(--color-secundario);
+    background-color: white;
+    width: 515px;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+.relleno {
+    background-color: var(--color-secundario);
     color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    width: 180px;
-}
-
-.reset {
-    background-color: var(--color-acento2);
-}
-
-.submit {
-    background-color: var(--color-acento1);
-    margin-left: 50px;
-}
-
-footer {
-    background-color: #3958f1;
-    padding: 30px 100px;
-}
-
-footer img {
-    width: 300px;
 }
