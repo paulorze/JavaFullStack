@@ -1,52 +1,68 @@
 :root {
     --color-texto: #04146c;
     --color-secundario:  #0a2ff1;
+    --color-fondo: #eff2ff;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@font-face {
+    font-family: 'Coolvetica';
+    src: url(./assets/coolvetica\ rg.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+    color: var(--color-texto);
 }
 
-main {
+body {
     padding: 20px;
 }
 
-section {
-    width: 1500px;
-    display: flex ;
-    align-items: center;
-}
-
-.texto {
-    width: 30%;
-    padding-left: 60px;
-}
-
 h1 {
-    font-size: 48pt;
-    font-weight: bold;
+    font-family: 'Coolvetica', sans-serif;
+    font-size: 90pt;
     color: var(--color-secundario);
     margin-bottom: 40px;
 }
 
-.subtitulo {
-    font-size: 24pt;
-    font-weight: 300;
-    color: var(--color-texto);
+header p {
+    font-size: 30pt;
     margin-bottom: 40px;
 }
 
-.puntuacion {
-    width: 45%;
-    margin-bottom: 15px;
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
-.calificacion {
-    font-size: 12pt;
-    color: var(--color-texto);
+.card {
+    width: 25%;
+    padding: 1em;
+    background-color: var(--color-fondo);
+}
+
+.card img {
+    width: 30%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.usuario {
+    font-weight: 300;
+}
+
+h2 {
+    font-size: 18pt;
+    font-weight: 900;
+    margin: 20px 0;
+}
+
+.comentario {
+    font-size: 18pt;
 }
