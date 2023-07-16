@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Hosting</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="./assets/M5-logo-azul.svg" id="logo" alt="Logo de Web Hosting">
+            <ul>
+                <li><a href="/index.html">HOME</a></li>
+                <li class="active"><a href="./contacto.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contacto">
+        <aside>
+            <p class="contacto__titulo">
+                ¿Quer&eacute;s que nos contactemos con vos?
+            </p>
+            <p class="contacto__subtitulo">
+                Dejanos tu consulta:
+            </p>
+            <form action="#">
+                <label for="nombre">
+                    Nombre completo <i>*</i>
+                </label>
+                <input type="text" name="nombre" required>
+                <label for="mail">
+                    Email <i>*</i>
+                </label>
+                <input type="email" name="mail" placeholder="usuario@usuario.com" required>
+                <label for="comentario">
+                    Comentario <i>*</i>
+                </label>
+                <textarea name="comentario" id="" cols="30" rows="10" required></textarea>
+                <button type="reset" class="reset">
+                    Resetear
+                </button>
+                <button type="submit" class="submit">
+                    Enviar
+                </button>
+            </form>
+        </aside>
+    </main>
+</body>
+</html>

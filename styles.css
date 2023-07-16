@@ -1,6 +1,9 @@
 :root {
     --color-texto: #04146c;
     --color-secundario:  #0a2ff1;
+    --color-acento1: #2c00cc;
+    --color-acento2: #f98500;
+    --color-borde: #c5cdfd;
 }
 
 *{
@@ -64,4 +67,75 @@ p {
 
 img {
     width: 100%;
+}
+
+.contacto {
+    padding: 40px;
+}
+
+.contacto__titulo {
+    font-family: 'Roboto Slab', serif;
+    font-size: 34pt;
+    font-weight: bold;
+    color: var(--color-acento1);
+    margin-bottom: 30px;
+}
+
+.contacto__subtitulo, .contacto label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 23pt;
+    color: var(--color-texto);
+}
+
+.contacto__subtitulo {
+    margin-bottom: 30px;
+}
+
+input, textarea {
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 23pt;
+    border: 3px solid var(--color-borde);
+    outline: none;
+    width: 500px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+}
+
+input {
+    height: 50px;
+}
+
+textarea {
+    height: 100px;
+}
+
+.contacto label{
+    font-weight: bold;
+}
+
+i {
+    font-style: normal;
+    color: red;
+}
+
+button {
+    font-family: 'Roboto Slab', serif;
+    font-size: 24pt;
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 180px;
+}
+
+.reset {
+    background-color: var(--color-acento2);
+}
+
+.submit {
+    background-color: var(--color-acento1);
+    margin-left: 50px;
 }
