@@ -1,1 +1,0 @@
-Hola profe, como le va? Le queria comentar que no segui la estructura propuesta por el pdf porque (hasta donde tengo entendido) no deberia colocarse un h2 por encima de un h1 en el html. Por otro lado, para que queden los textos como en la imagen, coloque los br sugeridos, pero creo haber entendido al profe que no habia que usarlos mucho. Que tenga buen fin de semana ^-^
