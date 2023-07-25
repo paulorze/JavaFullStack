@@ -1,7 +1,6 @@
 :root {
     --color-texto: #04146c;
     --color-secundario:  #8a9af1;
-    --color-acento: #5974ff;
 }
 
 *{
@@ -11,51 +10,43 @@
 }
 
 body {
-    font-family: 'Mulish', sans-serif;
+    font-family: 'Source Sans 3', sans-serif;
 }
 
-main {
-    padding: 2rem 4rem;
+img {
+    width: 100%;
 }
 
-form {
-    max-width: 700px;
-}
-
-.form-label {
-    font-size: 18pt;
-    font-weight: 600;
+h1 {
+    font-size: 62pt;
+    font-weight: 900;
     color: var(--color-texto);
 }
 
-.form-control {
-    border: 1px solid var(--color-secundario);
-}
-
-.form-text {
-    font-size: 13pt;
-    font-style: italic;
+p {
+    font-size: 16pt;
     color: var(--color-texto);
 }
 
-.form-check-label {
-    font-size: 18pt;
+i {
+    font-size: 16pt;
     color: var(--color-texto);
-    margin-left: 1rem;
 }
 
 .btn {
-    font-family: 'Mulish', sans-serif;
-    font-size: 18pt;
-    font-weight: bold;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 14pt;
+    font-variant: small-caps;
+    text-transform: capitalize;
+    color: white;
+    background-color: var(--color-texto);
+    border-radius: 0;
     width: 150px;
-    height: 50px;
-    background-color: var(--color-acento);
 }
 
 @media screen and (min-width: 768px) {
-    h1 {
-        font-size: 49pt;
+    img {
+        width: 80%;
     }
 }
 
