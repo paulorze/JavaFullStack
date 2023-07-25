@@ -1,6 +1,7 @@
 :root {
     --color-texto: #04146c;
-    --color-secundario:  #0a2ff1;
+    --color-secundario:  #8a9af1;
+    --color-acento: #5974ff;
 }
 
 *{
@@ -17,34 +18,39 @@ main {
     padding: 2rem 4rem;
 }
 
-section {
-    padding: 2rem !important;
+form {
+    max-width: 700px;
 }
 
-h1 {
-    font-size: 37pt;
+.form-label {
+    font-size: 18pt;
+    font-weight: 600;
+    color: var(--color-texto);
+}
+
+.form-control {
+    border: 1px solid var(--color-secundario);
+}
+
+.form-text {
+    font-size: 13pt;
+    font-style: italic;
+    color: var(--color-texto);
+}
+
+.form-check-label {
+    font-size: 18pt;
+    color: var(--color-texto);
+    margin-left: 1rem;
+}
+
+.btn {
+    font-family: 'Mulish', sans-serif;
+    font-size: 18pt;
     font-weight: bold;
-    color: var(--color-texto);
-    margin: 1.5rem 0;
-}
-
-p {
-    font-size: 18pt;
-    color: var(--color-texto);
-}
-
-strong {
-    font-size: 18pt;
-    font-weight: 700;
-    color: var(--color-secundario);
-}
-
-aside {
-    padding: 0 !important;
-}
-
-img {
-    width: 100%;
+    width: 150px;
+    height: 50px;
+    background-color: var(--color-acento);
 }
 
 @media screen and (min-width: 768px) {
