@@ -13,43 +13,19 @@ body {
     font-family: 'Mulish', sans-serif;
 }
 
+main {
+    padding: 2rem 4rem;
+}
+
+section {
+    padding: 2rem !important;
+}
+
 h1 {
-    text-align: center;
-    font-size: 30pt;
+    font-size: 37pt;
     font-weight: bold;
     color: var(--color-texto);
     margin: 1.5rem 0;
-    padding: 2rem;
-}
-
-.card {
-    border: none;
-    padding: 15px;
-}
-
-.card-img {
-    width: 100%;
-}
-
-.card-img img {
-    width: 100%;
-}
-
-.card-text {
-    text-align: center;
-}
-
-h2 {
-    font-size: 30pt;
-    font-weight: 700;
-    color: var(--color-secundario);
-    margin-top: .5rem;
-}
-
-strong {
-    font-size: 18pt;
-    font-weight: 700;
-    color: var(--color-texto);
 }
 
 p {
@@ -57,13 +33,18 @@ p {
     color: var(--color-texto);
 }
 
-button {
-    font-family: 'Mulish', sans-serif;
+strong {
     font-size: 18pt;
-    color: var(--color-texto);
-    background-color: white;
-    border: 2px solid var(--color-secundario);
-    padding: .5rem 1.5rem;
+    font-weight: 700;
+    color: var(--color-secundario);
+}
+
+aside {
+    padding: 0 !important;
+}
+
+img {
+    width: 100%;
 }
 
 @media screen and (min-width: 768px) {
