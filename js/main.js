@@ -1,17 +1,16 @@
 // Llamamos a todos los objetos del HTML que utilizaremos
-const costosFijosInput = document.getElementById('costosFijos');
-const precioVentaInput = document.getElementById('precioVenta');
-const costosVariablesInput = document.getElementById('costosVariables');
+const ingresosInput = document.getElementById('ingresos');
 const btnCalcular = document.getElementById('btnCalcular');
-const resultH2 = document.getElementById('result');
+const gastosNecesarios = document.getElementById('gastosNecesarios');
+const gastosOpcionales = document.getElementById('gastosOpcionales');
+const ahorrosInversion = document.getElementById('ahorrosInversion');
 const emsg1 = document.getElementById('emsg1');
-const emsg2 = document.getElementById('emsg2');
-const emsg3 = document.getElementById('emsg3');
 
 // Creamos las variables que seran utilizadas como flag 
-let costosFijosValue = null;
-let precioVentaValue = null;
-let costosVariablesValue = null;
+let ingresosValue = null;
+let gastosNecesariosValue = null;
+let gastosOpcionalesValue = null;
+let ahorrosInversionValue = null;
 
 // Creamos las funciones necesarias para validar los datos ingresados y escribir en el HTML
 const write = (obj, text) => {
@@ -30,22 +29,23 @@ const validateInput = (input, emsg) => {
 };
 
 const validateForm = () => {
-    costosFijosValue = validateInput(costosFijosInput, emsg1);
-    precioVentaValue = validateInput(precioVentaInput, emsg2);
-    costosVariablesValue = validateInput(costosVariablesInput, emsg3);
+    ingresosValue = validateInput(ingresosInput, emsg1);
 };
 
 const calculate = () => {
-    const result = costosFijosValue / (precioVentaValue - costosVariablesValue);
-    console.log(result);
-    write(resultH2, result);
+    gastosNecesariosValue = ingresosValue * 0.5;
+    gastosOpcionalesValue = ingresosValue * 0.3;
+    ahorrosInversionValue = ingresosValue * 0.2;
 };
 
 const send= ()=> {
     validateForm();
-    if (!costosFijosValue || !precioVentaValue || !costosVariablesValue) {
+    if (!ingresosValue) {
         return
     } else {
         calculate();
+        write(gastosNecesarios,"$ " + gastosNecesariosValue);
+        write(gastosOpcionales,"$ " +  gastosOpcionalesValue);
+        write(ahorrosInversion,"$ " +  ahorrosInversionValue);
     };
 };
