@@ -25,12 +25,15 @@
         A continuacion, ingrese su edad:
     </p>
     <form action="#">
-        <label for="edad">
-            Edad
+        <label for="username">
+            Username
         </label>
-        <input type="number" name="edad" id="edad" required min="0">
-        <div id="emsg1"></div>
-        <button id="btnCalcular" type="button" onclick="send()">Verificar</button>
+        <input type="text" name="username" id="username" required>
+        <label for="password">
+            Password
+        </label>
+        <input type="password" name="password" id="password" required>
+        <button id="btnLogin" type="button" onclick="send()">Login</button>
     </form>
     <h2
         id="result"
