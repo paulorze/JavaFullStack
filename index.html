@@ -19,36 +19,21 @@
 </head>
 <body>
     <h1>
-        Presupuesto personal
+        Validacion de edad
     </h1>
     <p>
-        Coloque el monto de sus ingresos para calcular su modelo de presupuesto.
+        A continuacion, ingrese su edad:
     </p>
     <form action="#">
-        <label for="ingresos">Ingresos</label>
-        <input type="number" name="ingresos" id="ingresos" required min="0">
+        <label for="edad">
+            Edad
+        </label>
+        <input type="number" name="edad" id="edad" required min="0">
         <div id="emsg1"></div>
-        <button id="btnCalcular" type="button" onclick="send()">Calcular</button>
+        <button id="btnCalcular" type="button" onclick="send()">Verificar</button>
     </form>
-    <h2>
-        El 50% de sus ingresos, que podra utilizar para gastos necesarios es:
-    </h2>
     <h2
-        id="gastosNecesarios"
-    >
-    </h2>
-    <h2>
-        El 30% de sus ingresos, que podra utilizar para gastos opcionales es:
-    </h2>
-    <h2
-        id="gastosOpcionales"
-    >
-    </h2>
-    <h2>
-        El 20% de sus ingresos, que podra utilizar para ahorros e inversion es:
-    </h2>
-    <h2
-        id="ahorrosInversion"
+        id="result"
     >
     </h2>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>

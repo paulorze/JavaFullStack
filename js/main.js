@@ -1,16 +1,12 @@
 // Llamamos a todos los objetos del HTML que utilizaremos
-const ingresosInput = document.getElementById('ingresos');
+const edadInput = document.getElementById('edad');
 const btnCalcular = document.getElementById('btnCalcular');
-const gastosNecesarios = document.getElementById('gastosNecesarios');
-const gastosOpcionales = document.getElementById('gastosOpcionales');
-const ahorrosInversion = document.getElementById('ahorrosInversion');
+const result = document.getElementById('result');
 const emsg1 = document.getElementById('emsg1');
 
 // Creamos las variables que seran utilizadas como flag 
-let ingresosValue = null;
-let gastosNecesariosValue = null;
-let gastosOpcionalesValue = null;
-let ahorrosInversionValue = null;
+let edadValue = null;
+
 
 // Creamos las funciones necesarias para validar los datos ingresados y escribir en el HTML
 const write = (obj, text) => {
@@ -19,7 +15,7 @@ const write = (obj, text) => {
 
 const validateInput = (input, emsg) => {
     const value = Number(input.value);
-    if (!value || value === NaN) {
+    if (!value || value === NaN || value <= 0 || value >= 100) {
         write(emsg,"Por favor, ingrese un dato valido.");
         return null 
     } else {
@@ -29,23 +25,23 @@ const validateInput = (input, emsg) => {
 };
 
 const validateForm = () => {
-    ingresosValue = validateInput(ingresosInput, emsg1);
+    edadValue = validateInput(edadInput, emsg1);
+    write(result,"")
 };
 
 const calculate = () => {
-    gastosNecesariosValue = ingresosValue * 0.5;
-    gastosOpcionalesValue = ingresosValue * 0.3;
-    ahorrosInversionValue = ingresosValue * 0.2;
+    if (edadValue >= 18) {
+        write(result,"Edad validada, es mayor de 18 anios.")
+    } else {
+        write(result,"Error, es menor de 18 anios.")
+    };
 };
 
 const send= ()=> {
     validateForm();
-    if (!ingresosValue) {
+    if (!edadValue) {
         return
     } else {
         calculate();
-        write(gastosNecesarios,"$ " + gastosNecesariosValue);
-        write(gastosOpcionales,"$ " +  gastosOpcionalesValue);
-        write(ahorrosInversion,"$ " +  ahorrosInversionValue);
     };
 };
