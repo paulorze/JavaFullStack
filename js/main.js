@@ -82,12 +82,29 @@ const calcularFlujoDeCaja = () => {
     return totalIngresos - totalEgresos;
 };
 
+const toggleClass = (num) => {
+    if (num > 0) {
+        resultado.classList.add('positivo');
+        resultado.classList.remove('neutro');
+        resultado.classList.remove('negativo');
+    } else if (num === 0) {
+        resultado.classList.add('neutro');
+        resultado.classList.remove('positivo');
+        resultado.classList.remove('negativo');
+    } else {
+        resultado.classList.add('negativo');
+        resultado.classList.remove('neutro');
+        resultado.classList.remove('positivo');
+    };
+};
+
 const calcular= ()=> {
     validateData();
     if (!ingresosValid || !egresosValid) {
         write(errorMSG, 'Por favor, verifique los datos ingresados.')
     } else {
         const flujoDeCaja = calcularFlujoDeCaja();
-        write(resultado, flujoDeCaja)
+        toggleClass(flujoDeCaja);
+        write(resultado, flujoDeCaja);
     }
 };

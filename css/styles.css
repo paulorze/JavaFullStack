@@ -22,3 +22,18 @@
 #errorMSG {
     color: red;
 }
+
+.positivo {
+    color: green;
+    background-color: #a6f5b1;
+}
+
+.neutro {
+    color: orange;
+    background-color: #f5ed87;
+}
+
+.negativo {
+    color: red;
+    background-color: #e3928f;
+}
