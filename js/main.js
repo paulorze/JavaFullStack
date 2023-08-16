@@ -1,16 +1,38 @@
 // Llamamos a todos los objetos del HTML que utilizaremos
-const usernameInput = document.getElementById('username');
-const passwordInput = document.getElementById('password');
-const btnLogin = document.getElementById('btnLogin');
-const result = document.getElementById('result');
+const eneroIngreso = document.getElementById('eneroIngreso');
+const eneroEgreso = document.getElementById('eneroEgreso');
+const febreroIngreso = document.getElementById('febreroIngreso');
+const febreroEgreso = document.getElementById('febreroEgreso');
+const marzoIngreso = document.getElementById('marzoIngreso');
+const marzoEgreso = document.getElementById('marzoEgreso');
+const abrilIngreso = document.getElementById('abrilIngreso');
+const abrilEgreso = document.getElementById('abrilEgreso');
+const mayoIngreso = document.getElementById('mayoIngreso');
+const mayoEgreso = document.getElementById('mayoEgreso');
+const junioIngreso = document.getElementById('junioIngreso');
+const junioEgreso = document.getElementById('junioEgreso');
+const julioIngreso = document.getElementById('julioIngreso');
+const julioEgreso = document.getElementById('julioEgreso');
+const agostoIngreso = document.getElementById('agostoIngreso');
+const agostoEgreso = document.getElementById('agostoEgreso');
+const septiembreIngreso = document.getElementById('septiembreIngreso');
+const septiembreEgreso = document.getElementById('septiembreEgreso');
+const octubreIngreso = document.getElementById('octubreIngreso');
+const octubreEgreso = document.getElementById('octubreEgreso');
+const noviembreIngreso = document.getElementById('noviembreIngreso');
+const noviembreEgreso = document.getElementById('noviembreEgreso');
+const diciembreIngreso = document.getElementById('diciembreIngreso');
+const diciembreEgreso = document.getElementById('diciembreEgreso');
+const resultado = document.getElementById('resultado');
+const errorMSG = document.getElementById('errorMSG')
+const btn = document.getElementById('btn')
 
-// Creamos las variables correspondientes a las credenciales
-const usernameDB = 'admin';
-const passwordDB = '1234';
+const ingresos = [eneroIngreso, febreroIngreso, marzoIngreso, abrilIngreso, mayoIngreso, junioIngreso, julioIngreso, agostoIngreso, septiembreIngreso, octubreIngreso, noviembreIngreso, diciembreIngreso];
+const egresos = [eneroEgreso, febreroEgreso, marzoEgreso, abrilEgreso, mayoEgreso, junioEgreso, julioEgreso, agostoEgreso, septiembreEgreso, octubreEgreso, noviembreEgreso, diciembreEgreso];
 
 // Creamos las variables que seran utilizadas como flag
-let usernameValid = false;
-let passwordValid = false;
+let ingresosValid = false;
+let egresosValid = false;
 
 
 // Creamos las funciones necesarias para validar los datos ingresados y escribir en el HTML
@@ -18,26 +40,52 @@ const write = (obj, text) => {
     obj.innerHTML = text;
 };
 
-const validateInput = (input, flag) => {
-    const value = input.value;
-    if (!value || value !== flag) {
-        return false 
+const validateInput = (element) => {
+    const value = +element.textContent;
+    if (!value || value === NaN || value <=0 ) {
+        element.classList.remove('valid')
+        element.classList.add('error');
+        return false
     } else {
-        return true;
+        element.classList.remove('error');
+        element.classList.add('valid');
+        return true
     };
 };
 
-const validateForm = () => {
-    usernameValid = validateInput(usernameInput, usernameDB);
-    passwordValid = validateInput(passwordInput, passwordDB);
+const validateData = () => {
+    ingresosValid = true;
+    egresosValid = true;
+    ingresos.forEach(elemento => {
+        if (ingresosValid === true) {
+            ingresosValid = validateInput(elemento)
+        };
+    });
+    egresos.forEach(elemento => {
+        if(egresosValid === true) {
+            egresosValid = validateInput(elemento)
+        };
+    });
 };
 
-const send= ()=> {
-    validateForm();
-    if (!usernameValid || !passwordValid) {
-        write(result, "Username o password invalidos")
-        return
+const calcularFlujoDeCaja = () => {
+    let totalIngresos = 0;
+    let totalEgresos = 0;
+    ingresos.forEach(elemento => {
+        totalIngresos += +elemento.textContent
+    });
+    egresos.forEach(elemento => {
+        totalEgresos += +elemento.textContent
+    });
+    return totalIngresos - totalEgresos;
+};
+
+const calcular= ()=> {
+    validateData();
+    if (!ingresosValid || !egresosValid) {
+        write(errorMSG, 'Por favor, verifique los datos ingresados.')
     } else {
-        write(result, "Bienvenido de nuevo usuario")
-    };
+        const flujoDeCaja = calcularFlujoDeCaja();
+        write(resultado, flujoDeCaja)
+    }
 };

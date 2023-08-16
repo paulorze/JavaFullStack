@@ -19,26 +19,255 @@
 </head>
 <body>
     <h1>
-        Validacion de edad
+        Flujo de Caja
     </h1>
     <p>
-        A continuacion, ingrese su edad:
+        A continuacion, ingrese el flujo de caja del ultimo anio:
     </p>
-    <form action="#">
-        <label for="username">
-            Username
-        </label>
-        <input type="text" name="username" id="username" required>
-        <label for="password">
-            Password
-        </label>
-        <input type="password" name="password" id="password" required>
-        <button id="btnLogin" type="button" onclick="send()">Login</button>
-    </form>
-    <h2
-        id="result"
+    <table>
+        <thead>
+            <tr>
+                <th>
+                    Periodo
+                </th>
+                <th>
+                    Ingreso
+                </th>
+                <th>
+                    Egreso
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    Enero
+                </td>
+                <td
+                    id="eneroIngreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+                <td
+                    id="eneroEgreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Febrero
+                </td>
+                <td
+                    id="febreroIngreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+                <td
+                    id="febreroEgreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Marzo
+                </td>
+                <td
+                    id="marzoIngreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+                <td
+                    id="marzoEgreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Abril
+                </td>
+                <td
+                    id="abrilIngreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+                <td
+                    id="abrilEgreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Mayo
+                </td>
+                <td
+                    id="mayoIngreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+                <td
+                    id="mayoEgreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Junio
+                </td>
+                <td
+                    id="junioIngreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+                <td
+                    id="junioEgreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Julio
+                </td>
+                <td
+                    id="julioIngreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+                <td
+                    id="julioEgreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Agosto
+                </td>
+                <td
+                    id="agostoIngreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+                <td
+                    id="agostoEgreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Septiembre
+                </td>
+                <td
+                    id="septiembreIngreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+                <td
+                    id="septiembreEgreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Octubre
+                </td>
+                <td
+                    id="octubreIngreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+                <td
+                    id="octubreEgreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Noviembre
+                </td>
+                <td
+                    id="noviembreIngreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+                <td
+                    id="noviembreEgreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Diciembre
+                </td>
+                <td
+                    id="diciembreIngreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+                <td
+                    id="diciembreEgreso"
+                    contenteditable="true"
+                >
+    
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td
+                    colspan="2"
+                >
+                    Resultado:
+                </td>
+                <td
+                    id="resultado"
+                >
+
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+    <p
+        id="errorMSG"
+    ></p>
+    <button
+        id="btn"
+        onclick="calcular()"
     >
-    </h2>
+        Calcular
+    </button>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
 </body>

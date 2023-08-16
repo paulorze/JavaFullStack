@@ -9,3 +9,16 @@
     box-sizing: border-box;
 }
 
+.error {
+    color: red;
+    background-color: #e3928f;
+}
+
+.valid {
+    color: green;
+    background-color: #a6f5b1;
+}
+
+#errorMSG {
+    color: red;
+}
