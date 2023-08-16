@@ -1,39 +1,41 @@
 // Llamamos a todos los objetos del HTML que utilizaremos
-const eneroIngreso = document.getElementById('eneroIngreso');
-const eneroEgreso = document.getElementById('eneroEgreso');
-const febreroIngreso = document.getElementById('febreroIngreso');
-const febreroEgreso = document.getElementById('febreroEgreso');
-const marzoIngreso = document.getElementById('marzoIngreso');
-const marzoEgreso = document.getElementById('marzoEgreso');
-const abrilIngreso = document.getElementById('abrilIngreso');
-const abrilEgreso = document.getElementById('abrilEgreso');
-const mayoIngreso = document.getElementById('mayoIngreso');
-const mayoEgreso = document.getElementById('mayoEgreso');
-const junioIngreso = document.getElementById('junioIngreso');
-const junioEgreso = document.getElementById('junioEgreso');
-const julioIngreso = document.getElementById('julioIngreso');
-const julioEgreso = document.getElementById('julioEgreso');
-const agostoIngreso = document.getElementById('agostoIngreso');
-const agostoEgreso = document.getElementById('agostoEgreso');
-const septiembreIngreso = document.getElementById('septiembreIngreso');
-const septiembreEgreso = document.getElementById('septiembreEgreso');
-const octubreIngreso = document.getElementById('octubreIngreso');
-const octubreEgreso = document.getElementById('octubreEgreso');
-const noviembreIngreso = document.getElementById('noviembreIngreso');
-const noviembreEgreso = document.getElementById('noviembreEgreso');
-const diciembreIngreso = document.getElementById('diciembreIngreso');
-const diciembreEgreso = document.getElementById('diciembreEgreso');
-const resultado = document.getElementById('resultado');
-const errorMSG = document.getElementById('errorMSG')
-const btn = document.getElementById('btn')
+const capital1 = document.getElementById('capital1');
+const interes1 = document.getElementById('interes1');
+const resultante1 = document.getElementById('resultante1');
+const capital2 = document.getElementById('capital2');
+const interes2 = document.getElementById('interes2');
+const resultante2 = document.getElementById('resultante2');
+const capital3 = document.getElementById('capital3');
+const interes3 = document.getElementById('interes3');
+const resultante3 = document.getElementById('resultante3');
 
-const ingresos = [eneroIngreso, febreroIngreso, marzoIngreso, abrilIngreso, mayoIngreso, junioIngreso, julioIngreso, agostoIngreso, septiembreIngreso, octubreIngreso, noviembreIngreso, diciembreIngreso];
-const egresos = [eneroEgreso, febreroEgreso, marzoEgreso, abrilEgreso, mayoEgreso, junioEgreso, julioEgreso, agostoEgreso, septiembreEgreso, octubreEgreso, noviembreEgreso, diciembreEgreso];
+const capitalInput = [capital1, capital2, capital3];
+const data = [
+    {
+        capital: capital1,
+        plazo: 30,
+        tasa: 0.15,
+        interes: interes1,
+        resultante: resultante1
+    },
+    {
+        capital: capital2,
+        plazo: 180,
+        tasa: 0.10,
+        interes: interes2,
+        resultante: resultante2
+    },
+    {
+        capital: capital3,
+        plazo: 60,
+        tasa: 0.23,
+        interes: interes3,
+        resultante: resultante3
+    }
+];
 
 // Creamos las variables que seran utilizadas como flag
-let ingresosValid = false;
-let egresosValid = false;
-
+let capitalValid = false;
 
 // Creamos las funciones necesarias para validar los datos ingresados y escribir en el HTML
 const write = (obj, text) => {
@@ -54,38 +56,36 @@ const validateInput = (element) => {
 };
 
 const validateData = () => {
-    ingresosValid = true;
-    egresosValid = true;
-    ingresos.forEach(elemento => {
-        if (ingresosValid === true) {
-            ingresosValid = validateInput(elemento)
-        };
-    });
-    egresos.forEach(elemento => {
-        if(egresosValid === true) {
-            egresosValid = validateInput(elemento)
+    capitalValid = true;
+    capitalInput.forEach(elemento => {
+        const validacion = validateInput(elemento);
+        if (capitalValid === true && !validacion) {
+            capitalValid = false
         };
     });
 };
 
-const calcularFlujoDeCaja = () => {
-    let totalIngresos = 0;
-    let totalEgresos = 0;
-    ingresos.forEach(elemento => {
-        totalIngresos += +elemento.textContent
-    });
-    egresos.forEach(elemento => {
-        totalEgresos += +elemento.textContent
-    });
-    return totalIngresos - totalEgresos;
+const calcularIntereses = ({capital, plazo, tasa, interes, resultante}) => {
+    const capitalInt = +capital.textContent
+    const interesResultante = capitalInt * plazo * tasa / 100;
+    const capitalResultante = capitalInt + interesResultante;
+    write(interes, interesResultante);
+    write(resultante, capitalResultante);
 };
 
 const calcular= ()=> {
     validateData();
-    if (!ingresosValid || !egresosValid) {
+    if (!capitalValid) {
         write(errorMSG, 'Por favor, verifique los datos ingresados.')
     } else {
-        const flujoDeCaja = calcularFlujoDeCaja();
-        write(resultado, flujoDeCaja)
+        data.forEach(elemento => {
+            calcularIntereses({
+                capital: elemento.capital,
+                plazo: elemento.plazo,
+                tasa: elemento.tasa,
+                interes: elemento.interes,
+                resultante: elemento.resultante
+            });
+        });
     }
 };
