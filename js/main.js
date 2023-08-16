@@ -57,13 +57,15 @@ const validateData = () => {
     ingresosValid = true;
     egresosValid = true;
     ingresos.forEach(elemento => {
-        if (ingresosValid === true) {
-            ingresosValid = validateInput(elemento)
+        const validacion = validateInput(elemento)
+        if (ingresosValid === true && !validacion) {
+            ingresosValid = false;
         };
     });
     egresos.forEach(elemento => {
-        if(egresosValid === true) {
-            egresosValid = validateInput(elemento)
+        const validacion = validateInput(elemento)
+        if(egresosValid === true && !validacion) {
+            egresosValid = false;
         };
     });
 };
