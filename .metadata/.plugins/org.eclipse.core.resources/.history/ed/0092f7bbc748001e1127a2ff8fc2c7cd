@@ -1,0 +1,16 @@
+package mjsd1e1;
+import java.util.Scanner;
+
+public class mjsd1e1 {
+	public static void main (String[] args) {
+		Scanner userInput = new Scanner(System.in); 
+		
+		System.out.println("Por favor, ingrese el año:");
+		int year = userInput.nextInt();
+		ValidateYear.validateYear(year);
+		int month;
+		int day;
+		
+		
+	}
+}

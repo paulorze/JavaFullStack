@@ -1,0 +1,10 @@
+package mjsd1e1;
+
+public class ValidateYear {
+	public static void validateYear (int year) {
+		if (year >= 1900 && year <= 2099)
+			System.out.println("Bien");
+		else
+			System.out.println("Mal");
+	}
+}

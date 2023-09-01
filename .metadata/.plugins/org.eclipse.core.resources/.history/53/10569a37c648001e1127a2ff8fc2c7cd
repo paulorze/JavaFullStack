@@ -1,0 +1,7 @@
+package mjsd1e1;
+
+public class mjsd1e1 {
+	public static void main (String[] args) {
+		System.out.println("hola mundo");
+	}
+}
