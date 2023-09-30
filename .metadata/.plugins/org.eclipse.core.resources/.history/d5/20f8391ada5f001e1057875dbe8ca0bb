@@ -1,0 +1,5 @@
+package mjsd3;
+
+public abstract class Flier {
+	public abstract boolean canLand();
+}

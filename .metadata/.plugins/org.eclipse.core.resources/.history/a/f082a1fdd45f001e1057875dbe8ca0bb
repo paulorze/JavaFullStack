@@ -1,0 +1,5 @@
+package mjsd3;
+
+public abstract class Volador {
+	public abstract boolean canLand();
+}

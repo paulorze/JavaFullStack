@@ -1,0 +1,17 @@
+package mjsd3;
+
+public class Helicopter extends Flier implements IContract {
+
+	@Override
+	public boolean compliesContract() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean canLand() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

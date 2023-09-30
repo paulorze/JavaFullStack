@@ -1,0 +1,20 @@
+package mjsd3;
+
+public class Plane extends Flier {
+
+	public Plane(boolean canLand) {
+		super(canLand);
+		this.canLand = true;
+	}
+
+	@Override
+	public boolean compliesContract() {
+		return true;
+	}
+
+	@Override
+	public void setCanLand() {
+		this.canLand = true;
+	};
+
+}
