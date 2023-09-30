@@ -1,0 +1,10 @@
+package mjsd2;
+
+import java.util.ArrayList;
+
+public class SaveData {
+	ArrayList <Alumno> Alumnos;
+	public SaveData() {
+		
+	};
+}

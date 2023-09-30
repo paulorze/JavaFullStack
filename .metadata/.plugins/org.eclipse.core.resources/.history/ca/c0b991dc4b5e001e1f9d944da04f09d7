@@ -1,0 +1,8 @@
+package mjsd2;
+
+public class Main {
+	Students Students = new Students();
+	int studentsQuantity = studentsQuantity();
+	int examsQuantity = examsQuantity();
+	
+}

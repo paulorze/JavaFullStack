@@ -1,0 +1,23 @@
+package mjsd2;
+
+import java.util.ArrayList;
+
+public class Main {
+	Students Students = new Students();
+	int studentsQuantity = Console.studentsQuantity();
+	int examsQuantity = Console.examsQuantity();
+	for (int i = 0; i < studentsQuantity; i++) {
+		String name = Console.addName();
+		String lastname = Console.addLastname();
+		ArrayList <Integer> examResults = Console.addResults(examsQuantity);
+		Students.addStudent(name, lastname, examResults);
+	};
+	System.out.println("Los estudiantes que promocionaron la materia son:");
+	Console.printStudents(Students.getPromotedStudents());
+	System.out.println("Los estudiantes que desaprobaron la materia son:");
+	Console.printStudents(Students.getFailedStudents());
+	System.out.println("El estudiante que obtuvo mejor promedio fue:");
+	Console.printStudent(Students.getHighestStudent());
+	System.out.println("El estudiante que obtuvo peor promedio fue:");
+	Console.printStudent(Students.getLowestStudent());
+}

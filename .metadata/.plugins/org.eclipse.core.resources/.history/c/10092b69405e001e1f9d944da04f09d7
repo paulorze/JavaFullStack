@@ -1,0 +1,19 @@
+package mjsd2;
+
+import java.util.ArrayList;
+
+public class Students {
+	ArrayList <Alumno> Students;
+	public Students() {
+		Students = new ArrayList<>();
+	};
+	
+	public void addStudent (String name, String lastname, ArrayList<Integer> Results) {
+		Alumno newAlumno = new Alumno(name, lastname);
+		for (Integer Result : Results) {
+			newAlumno.addResult(Result);
+		};
+		Students.add(newAlumno);
+	};
+
+}

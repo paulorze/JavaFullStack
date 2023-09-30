@@ -1,0 +1,56 @@
+package mjsd2;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Console {
+	public static int studentsQuantity () {
+		System.out.println("Ingrese la cantidad de estudiantes en el curso:");
+		Scanner scanner = new Scanner(System.in);
+		int studentsQuantity = scanner.nextInt();
+		scanner.close();
+		return studentsQuantity;
+	};
+	
+	public static int examsQuantity () {
+		System.out.println("Ingrese la cantidad de exámenes que se tomaron en el curso:");
+		Scanner scanner = new Scanner(System.in);
+		int examsQuantity = scanner.nextInt();
+		scanner.close();
+		return examsQuantity;
+	};
+	
+	public static String addName() {
+		System.out.println("Por favor, ingrese el nombre del estudiante:");
+		Scanner scanner = new Scanner(System.in);
+		String name = scanner.nextLine();
+		scanner.close();
+		return name;
+	};
+	
+	public static String addLastname() {
+		System.out.println("Por favor, ingrese el apellido del estudiante:");
+		Scanner scanner = new Scanner(System.in);
+		String lastname = scanner.nextLine();
+		scanner.close();
+		return lastname;
+	};
+	
+	public static int addResult(int examNumber) {
+		String examLine = String.format("Agregue el resultado del examen %d:", examNumber);
+		System.out.println(examLine);
+		Scanner scanner = new Scanner(System.in);
+		int result = scanner.nextInt();
+		scanner.close();
+		if (result >= 0 || result <= 10) return result;
+		return addResult(examNumber);
+	};
+	
+	public static ArrayList<Integer> addResults(int examsQuantity) {
+		ArrayList<Integer> examResults = new ArrayList<>();
+		for (int i = 1; i <= examsQuantity; i++) {
+			examResults.add(addResult(i));
+		};
+		return examResults;
+	};
+}

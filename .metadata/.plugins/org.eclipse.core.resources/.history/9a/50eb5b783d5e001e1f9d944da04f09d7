@@ -1,0 +1,19 @@
+package mjsd2;
+
+public class Alumno {
+	String name;
+	String lastname;
+	ArrayList<Integer> ExamResults;
+	
+	public Alumno(String name, String lastname, int examQuantity, int[] examResults) {
+		super();
+		this.name = name;
+		this.lastname = lastname;
+		ExamQuantity = examQuantity;
+		ExamResults = examResults;
+	}
+	
+}
+
+
+In this case, I would have the ExamQuantity as the length of ExamResults
