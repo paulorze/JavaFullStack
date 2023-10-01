@@ -1,0 +1,23 @@
+package mjsd4;
+
+public class Main {
+	public static void main() {
+		CollectionCustom<Integer> integerCollection = new CollectionCustom<>();
+		integerCollection.showArray();
+		integerCollection.add(2);
+		integerCollection.add(3);
+		integerCollection.add(4);
+		integerCollection.add(5);
+		integerCollection.showArray();
+		integerCollection.addFirst(1);
+		integerCollection.showArray();
+		integerCollection.add(6);
+		integerCollection.add(7);
+		integerCollection.add(8);
+		integerCollection.add(9);
+		integerCollection.add(10);
+		integerCollection.add(11);
+		integerCollection.add(12);
+		integerCollection.showArray();
+	}
+}
